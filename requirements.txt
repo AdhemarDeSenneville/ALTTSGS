@@ -1,0 +1,14 @@
+
+
+pip install "kokoro>=0.8.2"
+
+sudo apt update && sudo apt install portaudio19-dev
+
+pip install --force-reinstall sounddevice
+
+sudo apt-get install xclip
+pip install pyperclip
+
+pip install keyboard pyautogui
+pip install pynput pyautogui pyperclip
+pip install keyboard pyautogui
