@@ -1,0 +1,17 @@
+
+
+# Linux Ubuntu
+sudo apt update && sudo apt install portaudio19-dev
+sudo apt-get install xclip
+
+# Windows
+# espeak.exe
+
+# Python
+# pip install "kokoro>=0.8.2" Dosnt work on my windows
+# pip install 0.7.16
+pip install pynput pyautogui pyperclip keyboard sounddevice
+pip install --upgrade transformers
+
+
+pip install "accelerate>=0.26.0"

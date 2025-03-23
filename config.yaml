@@ -1,0 +1,24 @@
+os: Windows
+
+settings:
+  audio_input: ""
+  audio_output: ""
+  voice: ""
+  language1: ""
+  language2: ""
+
+
+splitter:
+  min_length: 50
+  obj_length: 300
+  max_length: 500
+
+audio:
+  device: 4
+  samplerate: 24000
+
+tts:
+  speed: 1.3
+  voice: af_heart
+  device: cpu
+  lang_code: a #f

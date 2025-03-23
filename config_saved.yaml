@@ -1,0 +1,19 @@
+audio:
+  device: 4
+  samplerate: 24000
+os: Windows
+settings:
+  audio_input: Microsoft Sound Mapper - Input
+  audio_output: Microsoft Sound Mapper - Output
+  language1: a
+  language2: f
+  voice: af_heart
+splitter:
+  max_length: 500
+  min_length: 10
+  obj_length: 200
+tts:
+  device: cpu
+  lang_code: a
+  speed: 1.3
+  voice: af_heart
