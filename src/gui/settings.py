@@ -24,8 +24,9 @@ class SettingsTab:
     }
 
 
-    def __init__(self, notebook, config, tts_player):
+    def __init__(self, notebook, config, tts_player, stt_listener):
         self.tts_player = tts_player
+        self.stt_listener = stt_listener
 
         self.config = config
         self.config_settings = config['settings']

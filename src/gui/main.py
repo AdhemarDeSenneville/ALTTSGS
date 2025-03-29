@@ -35,6 +35,7 @@ class MainTab:
         self.os = config['os']
 
         self.text_area = None
+        self.stt_recording = False
         self.setup_callbacks()
         self.setup_styles()
         self.build_ui()
@@ -44,7 +45,7 @@ class MainTab:
     def setup_callbacks(self):
 
         self.tts_player.callback_set_text = self.set_text
-        self.stt_lisener.callback_set_text = self.set_text
+        self.stt_listener.callback_set_text = self.set_text
     
 
     def setup_styles(self):
@@ -137,7 +138,7 @@ class MainTab:
             bottom_left_frame,
             text="🎙",
             style="Modern.TButton",
-            command=self.start_recording
+            command=self.toggle_recording
         ).pack(side="left", expand=True, fill="x", padx=(0, 5))
 
         ttk.Button(
@@ -167,6 +168,7 @@ class MainTab:
 
 
     def toggle_recording(self):
+        print(self.stt_recording)
         if self.stt_recording:
             self.stt_listener.stop()
             self.stt_recording = False

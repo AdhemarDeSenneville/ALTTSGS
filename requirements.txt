@@ -25,3 +25,17 @@ pip install librosa soundfile
 pip install RealtimeSTT
 
 pip install faster-whisper
+
+
+# he installed torch version (2.3.1) is too new for the version of transformers you're using, which expects an older API (e.g., torch.library.register_fake has been removed in newer versions).
+
+# First step: Downgrade torch to version 2.2.0 to restore compatibility.
+
+# Run this command:
+
+
+
+# module 'torch.library' has no attribute 'register_fake':
+# pip uninstall torchvision
+# pip install torchaudio==2.2.0
+

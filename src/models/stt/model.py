@@ -47,7 +47,9 @@ class STTListener:
             
             # You can expose and add these later if needed:
             use_microphone=True,
-            level=logging.CRITICAL + 1  # Disable logging
+            level=logging.CRITICAL + 1,  # Disable logging
+            no_log_file = True,
+            print_transcription_time = False,
             # spinner=False,
         )
 
