@@ -4,7 +4,7 @@ import traceback
 from src.gui.full import GUI
 from src.utils.utils import load_config
 from src.models.tts.model import TTSPlayer
-
+from src.models.stt.model import STTListener
 
 if __name__ == "__main__":
 
@@ -12,8 +12,10 @@ if __name__ == "__main__":
 
     tts_player = TTSPlayer(CONFIG)
 
+    stt_listener = STTListener(CONFIG)
+
     try:
-        gui = GUI(CONFIG, tts_player)
+        gui = GUI(CONFIG, tts_player, stt_listener)
         gui.run()
     except Exception as e:
         print('EXCEPTION HAS BEEN TRIGGERED')

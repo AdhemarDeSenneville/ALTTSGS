@@ -22,3 +22,20 @@ tts:
   voice: af_heart
   device: cpu
   lang_code: a #f
+
+
+STT:
+  model: tiny
+  language: ""
+  compute_type: default
+  input_device_index: null
+  gpu_device_index: 0
+  device: cuda
+
+  # Optional callback hooks (uncomment and set if needed)
+  # on_recording_start: null
+  # on_recording_stop: null
+  # on_transcription_start: null
+
+  ensure_sentence_starting_uppercase: true
+  ensure_sentence_ends_with_period: true

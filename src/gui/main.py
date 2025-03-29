@@ -26,8 +26,10 @@ class MainTab:
         'languages': ['a', 'b', 'f', 'e', 'h', 'j', 'z', 'i', 'p'],
     }
 
-    def __init__(self, notebook, config, tts_player):
+    def __init__(self, notebook, config, tts_player, stt_listener):
         self.tts_player = tts_player
+        self.stt_listener = stt_listener
+
         self.frame = tk.Frame(notebook)
 
         self.os = config['os']
@@ -42,13 +44,14 @@ class MainTab:
     def setup_callbacks(self):
 
         self.tts_player.callback_set_text = self.set_text
+        self.stt_lisener.callback_set_text = self.set_text
     
 
     def setup_styles(self):
         style = ttk.Style() #self.root
         style.theme_use("clam")  # Use a minimal theme
 
-        # Create a custom button style
+        # Button style
         style.configure("Modern.TButton",
                         font=("Segoe UI", 11),
                         padding=10,
@@ -57,10 +60,22 @@ class MainTab:
                         foreground="white",
                         borderwidth=0,
                         focuscolor="")
-
         style.map("Modern.TButton",
                   background=[("active", self.COLOR_PALETTE["button_hover"])],
                   relief=[("pressed", "flat"), ("!pressed", "flat")])
+        
+        # Recording button style
+        style.configure("Recording.TButton",
+                font=("Segoe UI", 11),
+                padding=10,
+                relief="flat",
+                background="green",
+                foreground="white",
+                borderwidth=0,
+                focuscolor="")
+        style.map("Recording.TButton",
+          background=[("active", "#228B22")],  # hover = darker green
+          relief=[("pressed", "flat"), ("!pressed", "flat")])
         
         # Label style
         style.configure("TLabel",
@@ -151,8 +166,18 @@ class MainTab:
         self.text_area.pack(fill="both", expand=True, pady=(20, 0))
 
 
-    def start_recording(self):
-        pass
+    def toggle_recording(self):
+        if self.stt_recording:
+            self.stt_listener.stop()
+            self.stt_recording = False
+            self.toggle_btn.config(text="🎙", style="Modern.TButton")
+            print("🎤 STT stopped.")
+        else:
+            self.stt_listener.start()
+            self.stt_recording = True
+            self.toggle_btn.config(text="⏹️", style="Recording.TButton")
+            print("🎤 STT started.")
+
 
     def correct_spelling(self):
         pass

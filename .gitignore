@@ -1,2 +1,6 @@
 src/assets/
 src/githubs/
+
+src/gui/__pycache__/
+__pycache__/
+*.pyc

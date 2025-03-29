@@ -21,3 +21,7 @@ pip install librosa soundfile
 (clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS> cd .\src\
 (clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS\src> cd .\githubs\
 (clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS\src\githubs> git clone https://github.com/ufal/whisper_streaming.git
+
+pip install RealtimeSTT
+
+pip install faster-whisper

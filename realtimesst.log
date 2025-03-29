@@ -1,0 +1,210 @@
+2025-03-29 15:19:41.366 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-03-29 15:19:41.377 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-03-29 15:19:41.384 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-03-29 15:19:41.384 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-03-29 15:19:45.413 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-03-29 15:19:45.416 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\adhem\anaconda3\envs\clean_env\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-03-29 15:19:45.419 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-03-29 15:19:45.421 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\adhem\anaconda3\envs\clean_env\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-03-29 15:19:45.421 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-03-29 15:19:45.423 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\adhem\anaconda3\envs\clean_env\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-03-29 15:19:45.424 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-03-29 15:19:45.424 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\adhem\anaconda3\envs\clean_env\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-03-29 15:19:45.634 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-03-29 15:19:45.635 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-03-29 15:19:45.636 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-03-29 15:19:56.338 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-03-29 15:19:56.339 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-03-29 15:19:56.339 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:19:56.339 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:19:56.915 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:19:59.370 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:19:59.370 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:19:59.370 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:19:59.370 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:00.519 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:00.519 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:00.520 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:00.542 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:00.544 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:00.573 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:00.589 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:01.179 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.64 seconds
+2025-03-29 15:20:01.180 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:01.180 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:01.181 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:03.269 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:03.269 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:03.269 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:03.270 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:05.509 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:05.509 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:05.510 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:05.598 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:05.599 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:05.614 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:05.639 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:10.922 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 5.32 seconds
+2025-03-29 15:20:10.924 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:10.924 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:10.926 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:14.089 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:14.089 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:14.089 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:14.089 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:18.439 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:18.439 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:18.440 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:18.498 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:18.499 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:18.509 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:18.528 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:19.174 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.67 seconds
+2025-03-29 15:20:19.175 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:19.175 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:19.176 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:21.449 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:21.449 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:21.449 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:21.449 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:24.709 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:24.710 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:24.710 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:24.804 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:24.805 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:24.806 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:24.839 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:25.561 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.76 seconds
+2025-03-29 15:20:25.562 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:25.562 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:25.563 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:28.040 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:28.040 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:28.040 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:28.040 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:34.949 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:34.949 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:34.950 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:35.031 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:35.032 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:35.061 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:35.079 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:35.209 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:35.209 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:35.209 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2025-03-29 15:20:35.810 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-03-29 15:20:35.866 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.83 seconds
+2025-03-29 15:20:35.867 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:35.867 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:36.619 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:36.619 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:36.620 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:36.620 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:36.620 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:36.621 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:36.621 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:37.237 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.62 seconds
+2025-03-29 15:20:37.238 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:37.238 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:37.239 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:38.089 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:38.089 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:38.089 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:38.090 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:39.309 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:39.309 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:39.309 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:39.375 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:39.376 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:39.390 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:39.429 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:39.925 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.55 seconds
+2025-03-29 15:20:39.926 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:39.926 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:39.927 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:40.269 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:40.269 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:40.269 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:40.269 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:50.509 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:50.509 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:50.510 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:50.519 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:50.521 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:50.522 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:50.569 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:51.306 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.79 seconds
+2025-03-29 15:20:51.307 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:20:51.307 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:20:51.308 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-03-29 15:20:54.090 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:54.090 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:54.090 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-03-29 15:20:54.090 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:20:58.119 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:20:58.119 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2025-03-29 15:20:58.119 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:20:58.224 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:20:58.226 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:20:58.248 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:20:58.255 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:20:58.949 - RealTimeSTT: root - INFO - voice activity detected
+2025-03-29 15:20:58.949 - RealTimeSTT: root - INFO - recording started
+2025-03-29 15:20:58.950 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2025-03-29 15:21:09.571 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-03-29 15:21:09.588 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 11.36 seconds
+2025-03-29 15:21:09.589 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:21:09.589 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-03-29 15:21:10.349 - RealTimeSTT: root - INFO - recording stopped
+2025-03-29 15:21:10.349 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:21:10.350 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-03-29 15:21:10.350 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-03-29 15:21:10.350 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-03-29 15:21:10.351 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-03-29 15:21:10.352 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-03-29 15:21:11.223 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.87 seconds
+2025-03-29 15:21:11.224 - RealTimeSTT: root - INFO - Setting listen time
+2025-03-29 15:21:11.224 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-03-29 15:21:11.226 - RealTimeSTT: root - DEBUG - Waiting for recording start

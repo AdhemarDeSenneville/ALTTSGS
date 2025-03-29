@@ -7,6 +7,7 @@ import re
 def split_text(
         text, 
         rtf = 1.5,
+        cps = 10, # Characters per seconds
         min_length=10, 
         obj_length=200,
         max_length=500,
@@ -25,6 +26,10 @@ def split_text(
         
     warmup = True
     final_chunk_list = []
+
+    # New
+    total_time_to_generate = 0
+    total_time_to_playing = 0
     
     current_char_count = 0
     current_char_objectitive = min_length
@@ -55,18 +60,19 @@ def split_text(
                 if warmup:
 
                     maximum_char_objectitive = max(maximum_char_objectitive, current_char_count)
-                    current_char_objectitive = maximum_char_objectitive * rtf            
-                    final_chunk_list.append(' '.join(current_chunk))
-
-                    current_char_count = 0
-                    current_chunk = []
-                
+                    current_char_objectitive = maximum_char_objectitive * rtf
                 else:
                     current_char_objectitive = obj_length     
-                    final_chunk_list.append(' '.join(current_chunk))
 
-                    current_char_count = 0
-                    current_chunk = []
+                final_chunk_list.append(' '.join(current_chunk))
+
+                # New
+                total_time_to_generate += current_char_count/cps/rtf
+                total_time_to_playing = max(total_time_to_playing, total_time_to_generate)
+                total_time_to_playing += current_char_count/cps
+
+                current_char_count = 0
+                current_chunk = []
 
     
     return "\n".join(final_chunk_list)

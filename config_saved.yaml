@@ -10,10 +10,18 @@ settings:
   voice: af_heart
 splitter:
   max_length: 500
-  min_length: 10
+  min_length: 50
   obj_length: 200
 tts:
   device: cpu
   lang_code: a
   speed: 1.3
   voice: af_heart
+STT:
+  model: tiny
+  language: ""
+  compute_type: default
+  gpu_device_index: 0
+  device: cuda
+  ensure_sentence_starting_uppercase: true
+  ensure_sentence_ends_with_period: true
