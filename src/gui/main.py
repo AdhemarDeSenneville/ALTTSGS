@@ -36,17 +36,13 @@ class MainTab:
 
         self.text_area = None
         self.stt_recording = False
+        self.text_zone_mode = tk.IntVar(value=1)
         self.setup_callbacks()
         self.setup_styles()
         self.build_ui()
         self.bind_hotkeys()
     
-
-    def setup_callbacks(self):
-
-        self.tts_player.callback_set_text = self.set_text
-        self.stt_listener.callback_set_text = self.set_text
-    
+    # GUI
 
     def setup_styles(self):
         style = ttk.Style() #self.root
@@ -134,12 +130,13 @@ class MainTab:
         bottom_left_frame = ttk.Frame(left_frame)
         bottom_left_frame.pack(fill="x", pady=(10, 0))
 
-        ttk.Button(
+        self.record_btn = ttk.Button(
             bottom_left_frame,
             text="🎙",
             style="Modern.TButton",
             command=self.toggle_recording
-        ).pack(side="left", expand=True, fill="x", padx=(0, 5))
+        )
+        self.record_btn.pack(side="left", expand=True, fill="x", padx=(0, 5))
 
         ttk.Button(
             bottom_left_frame,
@@ -162,30 +159,56 @@ class MainTab:
         self.language_dropdown.bind("<<ComboboxSelected>>", lambda e: self.tts_player.change_lang_code(self.cfg["languages"][self.language_dropdown.current()]))
         self.language_dropdown.pack(fill="x", pady=4)
 
+        self.text_zone_toggle = self.text_zone_toggle = tk.Checkbutton(
+            right_frame,
+            text="Toggle",
+            variable=self.text_zone_mode,
+            onvalue=1,
+            offvalue=0,
+            command=self.toggle_text_zone_highlight
+        )
+        self.text_zone_toggle.pack(pady=4)
+
         # Lower text display section
         self.text_area = tk.Text(main_frame, height=5, font=("Segoe UI", 10), wrap="word", bd=1, relief="solid")
         self.text_area.pack(fill="both", expand=True, pady=(20, 0))
 
+    # Logique
 
     def toggle_recording(self):
         print(self.stt_recording)
         if self.stt_recording:
             self.stt_listener.stop()
             self.stt_recording = False
-            self.toggle_btn.config(text="🎙", style="Modern.TButton")
-            print("🎤 STT stopped.")
+            self.record_btn.config(text="🎙", style="Modern.TButton")
+            print("STT stopped.")
         else:
             self.stt_listener.start()
             self.stt_recording = True
-            self.toggle_btn.config(text="⏹️", style="Recording.TButton")
-            print("🎤 STT started.")
+            self.record_btn.config(text="🎙", style="Recording.TButton")
+            print("STT started.")
+
+    def toggle_text_zone_highlight(self):
+        if self.text_zone_mode.get() == 0:
+            self.text_area.config(bg="lightyellow")
+        else:
+            self.text_area.config(bg="white")
 
 
     def correct_spelling(self):
         pass
     
 
-    def set_text(self, content: str):
+    def setup_callbacks(self):
+
+        self.tts_player.callback_set_text = self.process_text_player
+        self.stt_listener.callback_set_text = self.process_text_listener
+    
+    def process_text_listener(self, content: str):
+        # TODO insert .' ' if point before
+        self.text_area.insert(tk.END, content + ' ')
+
+    def process_text_player(self, content: str):
         """Set the text in the text area."""
         self.text_area.delete("1.0", tk.END)
         self.text_area.insert(tk.END, content)

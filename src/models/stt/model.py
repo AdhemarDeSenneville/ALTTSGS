@@ -50,7 +50,7 @@ class STTListener:
             level=logging.CRITICAL + 1,  # Disable logging
             no_log_file = True,
             print_transcription_time = False,
-            # spinner=False,
+            spinner=False,
         )
 
         while not self.stop_event.is_set():
