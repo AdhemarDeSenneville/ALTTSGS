@@ -64,7 +64,7 @@ def copy_and_play():
     print("Playing copied text...")
 
     
-    clipboard_content_befor = pyperclip.paste()
+    clipboard_content_before = pyperclip.paste()
 
     
     pyautogui.hotkey("ctrl", "c")
@@ -73,7 +73,7 @@ def copy_and_play():
     clipboard_content = pyperclip.paste()
 
 
-    if clipboard_content_befor == clipboard_content:
+    if clipboard_content_before == clipboard_content:
         print("Selection impossible to query.")
         messagebox.showwarning("Warning", "Selection impossible to query.")
         return None
