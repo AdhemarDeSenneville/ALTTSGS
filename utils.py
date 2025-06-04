@@ -1,16 +1,30 @@
 import re
 
 
-def split_text(text, min_length=10, max_length=500, split_pattern='.'):
-    """
-    Split text by a specified pattern (default='.') ensuring each piece is:
-      - At least min_length characters (merge small ones with neighbors),
-      - At most max_length characters (split large ones by spaces),
-      - Returns a list of final sub-texts.
+def split_text(text, min_length=10, max_length=500, split_pattern="."):
+    """Split *text* into manageable pieces.
+
+    Parameters
+    ----------
+    text : str
+        The text to be split.
+    min_length : int, optional
+        Minimum length for a segment. Shorter segments are merged with the
+        following one.
+    max_length : int, optional
+        Maximum length for a segment. Longer segments are split by spaces.
+    split_pattern : str, optional
+        Regular expression used to split the initial text. By default it
+        splits on a period. Newlines are always considered as delimiters.
+
+    Returns
+    -------
+    str
+        Newline separated string containing the final segments.
     """
 
-    # 1. Split by the pattern (default is '.')
-    raw_segments = re.split(r'\.|\n', text)
+    # 1. Split by the provided pattern (plus newlines)
+    raw_segments = re.split(fr"{split_pattern}|\n", text)
 
     # Trim whitespace and discard empty segments from the ends
     segments = [seg.strip() for seg in raw_segments if seg.strip()]
