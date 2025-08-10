@@ -13,18 +13,18 @@ sudo apt-get install xclip
 pip install pynput pyautogui pyperclip keyboard sounddevice
 pip install --upgrade transformers
 
-
 pip install "accelerate>=0.26.0"
-
 pip install librosa soundfile
-
-(clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS> cd .\src\
-(clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS\src> cd .\githubs\
-(clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS\src\githubs> git clone https://github.com/ufal/whisper_streaming.git
-
+pip install faster-whisper
+pip install kokoro
 pip install RealtimeSTT
 
-pip install faster-whisper
+(clean_env) PS C:\Users\adhem\Desktop\Python\ALTTSGS> 
+cd .\src\
+cd .\githubs\
+git clone https://github.com/ufal/whisper_streaming.git
+
+
 
 
 # he installed torch version (2.3.1) is too new for the version of transformers you're using, which expects an older API (e.g., torch.library.register_fake has been removed in newer versions).

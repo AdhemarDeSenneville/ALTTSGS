@@ -1,6 +1,7 @@
 src/assets/
 src/githubs/
-
 src/gui/__pycache__/
+logs/
+weights/
 __pycache__/
 *.pyc
